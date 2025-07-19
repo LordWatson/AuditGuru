@@ -17,7 +17,7 @@ class SubscriptionPlanSeeder extends Seeder
 
         SubscriptionPlan::create([
             'name' => 'Basic',
-            'description' => 'Basic Plan include the essential features to pass basic audits',
+            'description' => 'Basic Plan includes the essential features to pass basic audits',
             'price' => 49.99,
             'interval' => 'monthly',
             'trial_period_days' => 30,
