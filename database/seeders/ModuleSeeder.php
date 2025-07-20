@@ -29,8 +29,6 @@ class ModuleSeeder extends Seeder
             $module['url'] = strtolower(str_replace(' ', '-', $module['name']));
         }
 
-        foreach($modules as $module){
-            Module::create($module);
-        }
+        Module::insert($modules);
     }
 }

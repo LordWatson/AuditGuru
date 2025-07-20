@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
             RolesSeeder::class,
             PermissionsSeeder::class,
             UsersSeeder::class,
+            FrameworkSeeder::class,
+            ControlSeeder::class,
+            DocumentSeeder::class,
+            AuditReportSeeder::class,
         ]);
     }
 }

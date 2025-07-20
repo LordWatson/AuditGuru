@@ -22,4 +22,19 @@ class Organization extends Model
     {
         return $this->belongsTo(SubscriptionPlan::class, 'plan_id');
     }
+
+    public function assessments(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Assessment::class, 'org_id');
+    }
+
+    public function documents(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Document::class, 'org_id');
+    }
+
+    public function auditReports(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(AuditReport::class, 'org_id');
+    }
 }
