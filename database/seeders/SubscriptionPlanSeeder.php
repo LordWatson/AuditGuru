@@ -13,8 +13,6 @@ class SubscriptionPlanSeeder extends Seeder
      */
     public function run(): void
     {
-        $subscriptionPlanIds = [1, 2, 3];
-
         $basic = SubscriptionPlan::create([
             'name' => 'Basic',
             'description' => 'Basic Plan includes the essential features to pass basic audits',

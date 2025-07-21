@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Actions\Module\CreateModuleAction;
 use App\Models\Module;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -11,7 +12,7 @@ class ModuleSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(CreateModuleAction $createModuleAction): void
     {
         $modules = [
             ['name' => 'Dashboard', 'description' => 'Overview of compliance status and quick actions.'],
@@ -27,8 +28,7 @@ class ModuleSeeder extends Seeder
 
         foreach($modules as &$module){
             $module['url'] = strtolower(str_replace(' ', '-', $module['name']));
+            $createModuleAction->execute($module);
         }
-
-        Module::insert($modules);
     }
 }
