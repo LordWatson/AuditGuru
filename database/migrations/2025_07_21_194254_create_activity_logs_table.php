@@ -26,7 +26,6 @@ return new class extends Migration
             $table->json('original')->nullable();
             $table->json('changes')->nullable();
             $table->timestamps();
-            $table->timestamps();
         });
     }
 
