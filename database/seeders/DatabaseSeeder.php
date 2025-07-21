@@ -15,12 +15,9 @@ class DatabaseSeeder extends Seeder
         Schema::disableForeignKeyConstraints();
 
         $this->call([
-            RolesSeeder::class,
-            PermissionsSeeder::class,
             ModuleSeeder::class,
             SubscriptionPlanSeeder::class,
             OrganizationsSeeder::class,
-            UsersSeeder::class,
             FrameworkSeeder::class,
             ControlSeeder::class,
             DocumentSeeder::class,
@@ -28,5 +25,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Schema::enableForeignKeyConstraints();
+
+        $this->call([
+            RolesSeeder::class,
+            PermissionsSeeder::class,
+            UsersSeeder::class,
+        ]);
     }
 }
