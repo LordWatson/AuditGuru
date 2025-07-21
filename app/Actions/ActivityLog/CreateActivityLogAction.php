@@ -4,7 +4,7 @@ namespace App\Actions\ActivityLog;
 
 use App\Models\ActivityLog;
 
-class CreateActivityLog
+class CreateActivityLogAction
 {
     /**
      * Create the action.

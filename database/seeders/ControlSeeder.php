@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Control;
+use App\Actions\Control\CreateControlAction;
 use App\Models\Framework;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ControlSeeder extends Seeder
@@ -12,7 +11,7 @@ class ControlSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(CreateControlAction $createControlAction): void
     {
         $cyberEssentials = Framework::where('slug', 'cyber-essentials')->first()->id;
 
@@ -24,6 +23,8 @@ class ControlSeeder extends Seeder
             ['framework_id' => $cyberEssentials, 'control_code' => 'CE-05', 'description' => 'Patch management and software updates.'],
         ];
 
-        Control::insert($controls);
+        foreach($controls as $control){
+            $createControlAction->execute($control);
+        }
     }
 }

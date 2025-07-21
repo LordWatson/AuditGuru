@@ -2,7 +2,7 @@
 
 namespace App\Actions;
 
-use App\Actions\ActivityLog\CreateActivityLog;
+use App\Actions\ActivityLog\CreateActivityLogAction;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -11,7 +11,7 @@ abstract class CreateAction
 {
     public function __construct
     (
-        protected CreateActivityLog $createActivityLog
+        protected CreateActivityLogAction $createActivityLog
     ){
         //
     }
@@ -44,6 +44,7 @@ abstract class CreateAction
         ?string $message = null
     ): void
     {
+
         $activityLog = [
             'model' => $model ? get_class($model) : null,
             'model_id' => $model?->id,
