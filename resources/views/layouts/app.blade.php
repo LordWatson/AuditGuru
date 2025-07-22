@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{ theme: localStorage.getItem('theme') || 'light' }"
+      x-init="document.documentElement.classList.add(theme)"
+      x-on:theme-change.window="theme = $event.detail; document.documentElement.classList = [$event.detail]; localStorage.setItem('theme', $event.detail);">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
