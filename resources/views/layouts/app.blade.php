@@ -13,6 +13,9 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- FontAwesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -20,6 +23,7 @@
     <div class="min-h-screen bg-gray-100 dark:bg-[#1a1a1a] flex">
         {{-- Sidebar --}}
         <div class="fixed top-0 left-0 h-screen w-48 bg-white dark:bg-[#313131] shadow-md flex flex-col justify-between">
+
             <div class="flex flex-col h-full justify-center items-center">
                 @foreach(Auth::user()->viewableModules() as $module)
                     <div class="py-3 px-6 text-lg text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-[#414141] cursor-pointer">
@@ -35,11 +39,13 @@
                 @csrf
                 <button
                     type="submit"
-                    class="w-full dark:bg-[#313131] dark:hover:bg-[#414141] dark:text-gray-200 py-2 px-4 text-center block"
+                    class="w-full hover:bg-gray-100 dark:bg-[#313131] dark:hover:bg-[#414141] dark:text-gray-200 py-2 px-4 text-center block"
                 >
                     {{ __('Logout') }}
                 </button>
             </form>
+
+            <x-dark-theme-button />
         </div>
 
         {{-- Main Content Area --}}
