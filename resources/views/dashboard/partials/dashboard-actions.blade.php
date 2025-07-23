@@ -4,10 +4,10 @@
     </div>
     <div class="p-6 grid grid-cols-4 gap-4">
         @if(Auth::user()->hasPermission('view', 'assessments'))
-            <a href="{{ route('assessments.index') }}"
+            <a href="{{ route('assessments.create') }}"
                class="quick-action-btn col-span-2 row-span-2"
             >
-                Assessments
+                Start Assessment
             </a>
         @endif
         @if(Auth::user()->hasPermission('view', 'policy generator'))

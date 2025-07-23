@@ -28,4 +28,9 @@ class Control extends Model
     {
         return $this->hasMany(Document::class, 'control_id');
     }
+
+    public function questions(): HasMany
+    {
+        return $this->hasMany(ControlQuestion::class, 'control_id');
+    }
 }

@@ -1,0 +1,227 @@
+[
+    {
+        "framework_id": 1,
+        "control_code": "CE-01",
+        "description": "Use of firewalls to secure Internet connections.",
+        "questions": [
+            "Do you have a firewall on all internet connections?",
+            "Are default passwords on firewalls changed to strong, unique passwords?"
+        ]
+    },
+    {
+        "framework_id": 1,
+        "control_code": "CE-02",
+        "description": "Secure configuration of devices and software.",
+        "questions": [
+            "Are all unnecessary user accounts and services disabled?",
+            "Do you change default passwords and settings on all devices?"
+        ]
+    },
+    {
+        "framework_id": 1,
+        "control_code": "CE-03",
+        "description": "User access control and privilege management.",
+        "questions": [
+            "Do you operate on the principle of least privilege for user accounts?",
+            "Are administrator accounts only used when necessary?"
+        ]
+    },
+    {
+        "framework_id": 1,
+        "control_code": "CE-04",
+        "description": "Use of up-to-date malware protection.",
+        "questions": [
+            "Do you use anti-virus or endpoint protection software on all devices?",
+            "Are malware definitions and security patches updated automatically?"
+        ]
+    },
+    {
+        "framework_id": 1,
+        "control_code": "CE-05",
+        "description": "Patch management and software updates.",
+        "questions": [
+            "Are all critical updates applied within 14 days?",
+            "Do you have an automated patch management system?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.5.1.1",
+        "description": "Organizations should have an approved information security policy that is reviewed regularly.",
+        "questions": [
+            "Do you have a documented information security policy?",
+            "When was the policy last reviewed or updated?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.6.1.1",
+        "description": "Roles and responsibilities for information security must be clearly defined.",
+        "questions": [
+            "Are roles and responsibilities formally assigned?",
+            "How do you ensure employees understand their security responsibilities?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.6.2.1",
+        "description": "Implement a policy for the secure use of mobile devices.",
+        "questions": [
+            "Do you enforce a mobile device management (MDM) policy?",
+            "Are devices encrypted and secured with passwords or biometrics?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.7.2.2",
+        "description": "Employees should receive appropriate training on security policies.",
+        "questions": [
+            "How often do you run security awareness training?",
+            "Do you track completion of training by all employees?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.8.1.1",
+        "description": "Maintain an inventory of all critical assets.",
+        "questions": [
+            "Do you maintain an up-to-date inventory of IT assets?",
+            "Who is responsible for asset management?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.8.2.1",
+        "description": "Information must be classified according to sensitivity.",
+        "questions": [
+            "Do you label documents based on sensitivity (e.g., Confidential)?",
+            "Do staff receive training on data classification?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.9.1.2",
+        "description": "Access rights should be granted based on the principle of least privilege.",
+        "questions": [
+            "Is there a documented access control policy?",
+            "How often do you review user permissions?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.9.2.1",
+        "description": "Formal processes for creating, changing, and deleting user accounts.",
+        "questions": [
+            "Do you have a defined process for user account lifecycle management?",
+            "How quickly are inactive accounts removed?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.12.2.1",
+        "description": "Changes to systems must be managed through a formal change control process.",
+        "questions": [
+            "Do you use a ticketing or approval system for changes?",
+            "Are all changes logged and reviewed?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.12.4.1",
+        "description": "User and system activities must be logged and monitored.",
+        "questions": [
+            "Do you have centralized logging for all critical systems?",
+            "Are logs reviewed for suspicious activity?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.13.1.1",
+        "description": "Network controls should protect information in networks and supporting systems.",
+        "questions": [
+            "Do you have firewalls or IDS/IPS systems in place?",
+            "Is network segmentation implemented where needed?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.13.2.3",
+        "description": "Controls should be in place to protect information in electronic messaging.",
+        "questions": [
+            "Are emails encrypted when containing sensitive data?",
+            "Do you use spam and phishing filters?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.14.2.1",
+        "description": "Establish and apply security principles for software development.",
+        "questions": [
+            "Do developers follow secure coding guidelines?",
+            "Is code reviewed for security vulnerabilities?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.15.1.1",
+        "description": "Information security requirements should be addressed in supplier agreements.",
+        "questions": [
+            "Do you assess supplier security before contracting?",
+            "Are security clauses included in all vendor agreements?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.16.1.1",
+        "description": "Establish a process for managing information security incidents.",
+        "questions": [
+            "Do you have an incident response plan?",
+            "When was the last incident drill performed?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.17.1.1",
+        "description": "The organization must determine requirements for information security during disruptions.",
+        "questions": [
+            "Do you have a tested disaster recovery plan?",
+            "How often is the business continuity plan updated?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.18.1.1",
+        "description": "Identify and document all relevant legal, regulatory, and contractual requirements.",
+        "questions": [
+            "Do you maintain a compliance register?",
+            "How do you track changes in relevant legislation?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.18.1.2",
+        "description": "Ensure compliance with intellectual property rights and licensing.",
+        "questions": [
+            "Are all software licenses documented?",
+            "How do you verify compliance with IPR laws?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.18.1.4",
+        "description": "Ensure compliance with data protection laws like GDPR.",
+        "questions": [
+            "Do you have a data privacy policy?",
+            "Do you perform regular data protection impact assessments?"
+        ]
+    },
+    {
+        "framework_id": 2,
+        "control_code": "A.18.2.1",
+        "description": "Conduct regular independent reviews of the ISMS.",
+        "questions": [
+            "When was your last internal or external ISMS audit?",
+            "Are audit findings tracked and resolved?"
+        ]
+    }
+]

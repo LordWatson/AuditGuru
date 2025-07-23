@@ -18,6 +18,13 @@ return new class extends Migration
             $table->text('description');
             $table->timestamps();
         });
+
+        Schema::create('control_questions', function (Blueprint $table) {
+        $table->id();
+        $table->unsignedBigInteger('control_id');
+        $table->text('question');
+        $table->timestamps();
+    });
     }
 
     /**
@@ -26,5 +33,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('controls');
+        Schema::dropIfExists('control_questions');
     }
 };

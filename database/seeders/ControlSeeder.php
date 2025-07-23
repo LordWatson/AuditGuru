@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Actions\Control\CreateControlAction;
+use App\Models\ControlQuestion;
 use App\Models\Framework;
 use Illuminate\Database\Seeder;
 
@@ -13,18 +14,27 @@ class ControlSeeder extends Seeder
      */
     public function run(CreateControlAction $createControlAction): void
     {
-        $cyberEssentials = Framework::where('slug', 'cyber-essentials')->first()->id;
-
-        $controls = [
-            ['framework_id' => $cyberEssentials, 'control_code' => 'CE-01', 'description' => 'Use of firewalls to secure Internet connections.'],
-            ['framework_id' => $cyberEssentials, 'control_code' => 'CE-02', 'description' => 'Secure configuration of devices and software.'],
-            ['framework_id' => $cyberEssentials, 'control_code' => 'CE-03', 'description' => 'User access control and privilege management.'],
-            ['framework_id' => $cyberEssentials, 'control_code' => 'CE-04', 'description' => 'Use of up-to-date malware protection.'],
-            ['framework_id' => $cyberEssentials, 'control_code' => 'CE-05', 'description' => 'Patch management and software updates.'],
-        ];
+        $controls = json_decode(file_get_contents(database_path('data/controls.json')), true);
 
         foreach($controls as $control){
-            $createControlAction->execute($control);
+            // get the questions array
+            $questions = $control['questions'];
+
+            // remove it from the data array passed to create the control
+            unset($control['questions']);
+
+            // create the control
+            $createdControl = $createControlAction->execute($control);
+
+            // now put the questions array into a new array we can use to bulk create the questions
+            $questionsData = array_map(fn($question) => [
+                'question' => $question,
+                'control_id' => $createdControl['control']->id,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ], $questions);
+
+            ControlQuestion::insert($questionsData);
         }
     }
 }
