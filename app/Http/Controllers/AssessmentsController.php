@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Framework;
 use Illuminate\Http\Request;
 
 class AssessmentsController extends Controller
@@ -19,7 +20,9 @@ class AssessmentsController extends Controller
      */
     public function create()
     {
-        //
+        $frameworks = Framework::all()->load('controls', 'controls.questions');
+
+        return view('assessments.assessment-create', compact('frameworks'));
     }
 
     /**
